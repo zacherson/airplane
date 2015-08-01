@@ -45,7 +45,7 @@ function love.load(arg)
    enemyImg = love.graphics.newImage('assets/enemy.png')
 end
 
-function keys(dt)
+function keys()
    -- I always start with an easy way to exit the game
    if love.keyboard.isDown('escape') then
       love.event.push('quit')
@@ -87,7 +87,7 @@ function keys(dt)
 end
 
 function love.update(dt)
-   keys(dt)
+   keys()
 
    -- Time out how far apart our shots can be.
    canShootTimer = canShootTimer - (1 * dt)
